@@ -42,6 +42,11 @@
             <button id="load-btn" class="cute-btn btn-load">📂 Load JSON</button>
             <input type="file" id="file-input" accept=".json" style="display: none;">
         </div>
+        
+        <div class="language-controls bottom-controls" style="margin-top: 1rem;">
+            <button id="lang-en" class="lang-btn" title="English">🇬🇧</button>
+            <button id="lang-vi" class="lang-btn" title="Vietnamese">🇻🇳</button>
+        </div>
 
         <!-- Add Modal -->
         <div id="modal" class="modal hidden">
@@ -65,8 +70,11 @@
                     <label>Activity:</label>
                     <input type="text" id="activity-input" placeholder="Study Math..." required>
                     
-                    <label>Anime Girl Message (Hover):</label>
+                    <label>Anime Girl Message (Hover) [EN]:</label>
                     <input type="text" id="hover-message-input" placeholder="Great job!">
+
+                    <label>Anime Girl Message (Hover) [VI]:</label>
+                    <input type="text" id="hover-message-vi-input" placeholder="Làm tốt lắm!">
 
                     <label>Color:</label>
                     <select id="color-select">

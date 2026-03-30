@@ -3,10 +3,11 @@
     {
       "id": 1,
       "day": 1,
-      "time": "09:00",
-      "text": "Math Class",
+      "time": "08:00",
+      "text": "Văn (30m)",
       "theme": "pink-theme",
-      "message of anime girl when hover": "You can solve anything, Master!"
+      "message of anime girl when hover": "A gentle start, Master~ Warm up your mind with literature!",
+      "message_vi": "Bắt đầu nhẹ nhàng thôi, Chủ nhân~ Khởi động trí não với văn học nào!"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "time": "10:00",
       "text": "Programming",
       "theme": "blue-theme",
-      "message of anime girl when hover": "Your code is so clean! ✨"
+      "message of anime girl when hover": "Your code is so clean! ✨",
+      "message_vi": "Code của anh sạch quá! ✨"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "time": "15:00",
       "text": "Anime Time!",
       "theme": "yellow-theme",
-      "message of anime girl when hover": "Yay! Time to relax together! 🌸"
+      "message of anime girl when hover": "Yay! Time to relax together! 🌸",
+      "message_vi": "Yay! Đến lúc thư giãn cùng nhau rồi! 🌸"
     }
   ],
   "timeSlots": [
