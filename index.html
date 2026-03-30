@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moe Timetable ~ Ganbatte!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>✨ My Moe Timetable ✨</h1>
+            <p>Let's do our best today!</p>
+        </header>
+
+        <main class="timetable-container">
+            <div class="controls">
+                <button id="add-btn" class="cute-btn">🌸 Add Activity</button>
+            </div>
+            <div class="grid-wrapper">
+                <table id="timetable">
+                    <thead>
+                        <tr>
+                            <th>Time / Day</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rendered by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <div class="character-container">
+            <div class="speech-bubble" id="speech-bubble">
+                <p id="quote">Senpai, you're doing great! Keep it up! 💖</p>
+            </div>
+            <img src="assets/anime_girl.png" alt="Motivating Anime Girl" class="character-img" id="character">
+        </div>
+
+        <!-- Add Modal -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Add New Activity ✏️</h2>
+                <form id="add-form">
+                    <label>Day:</label>
+                    <select id="day-select">
+                        <option value="1">Monday</option>
+                        <option value="2">Tuesday</option>
+                        <option value="3">Wednesday</option>
+                        <option value="4">Thursday</option>
+                        <option value="5">Friday</option>
+                        <option value="6">Saturday</option>
+                        <option value="7">Sunday</option>
+                    </select>
+                    
+                    <label>Time (e.g., 09:00):</label>
+                    <input type="text" id="time-input" placeholder="09:00" required>
+                    
+                    <label>Activity:</label>
+                    <input type="text" id="activity-input" placeholder="Study Math..." required>
+
+                    <label>Color:</label>
+                    <select id="color-select">
+                        <option value="pink-theme">Sakura Pink</option>
+                        <option value="blue-theme">Sky Blue</option>
+                        <option value="purple-theme">Lavender</option>
+                        <option value="yellow-theme">Sunshine</option>
+                        <option value="mint-theme">Mint Green</option>
+                    </select>
+
+                    <div class="modal-actions">
+                        <button type="button" id="cancel-btn" class="cute-btn alt">Cancel</button>
+                        <button type="submit" class="cute-btn">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
