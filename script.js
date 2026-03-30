@@ -13,6 +13,8 @@ const quotes = [
 const quoteEl = document.getElementById('quote');
 const characterEl = document.getElementById('character');
 
+let quoteInterval;
+
 // Change quote randomly
 function changeQuote() {
     const speechBubble = document.getElementById('speech-bubble');
@@ -24,11 +26,19 @@ function changeQuote() {
     quoteEl.textContent = randomQuote;
 }
 
+function startQuoteTimer() {
+    clearInterval(quoteInterval);
+    quoteInterval = setInterval(changeQuote, 10000);
+}
+
 // Change on click
-characterEl.addEventListener('click', changeQuote);
+characterEl.addEventListener('click', () => {
+    changeQuote();
+    startQuoteTimer();
+});
 
 // Change every 10 seconds
-setInterval(changeQuote, 10000);
+startQuoteTimer();
 
 // Timetable logic
 let scheduleData = JSON.parse(localStorage.getItem('moeTimetable')) || [
@@ -124,10 +134,12 @@ function renderTimetable() {
                     speechBubble.offsetHeight;
                     speechBubble.style.animation = 'popIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
                     quoteEl.textContent = tooltipMsg;
+                    startQuoteTimer();
                 });
                 
                 div.addEventListener('mouseleave', () => {
                     changeQuote();
+                    startQuoteTimer();
                 });
                 
                 const delBtn = document.createElement('button');
