@@ -1,0 +1,50 @@
+{
+  "scheduleData": [
+    {
+      "id": 1,
+      "day": 1,
+      "time": "09:00",
+      "text": "Math Class",
+      "theme": "pink-theme",
+      "message of anime girl when hover": "You can solve anything, Master!"
+    },
+    {
+      "id": 2,
+      "day": 2,
+      "time": "10:00",
+      "text": "Programming",
+      "theme": "blue-theme",
+      "message of anime girl when hover": "Your code is so clean! ✨"
+    },
+    {
+      "id": 3,
+      "day": 5,
+      "time": "15:00",
+      "text": "Anime Time!",
+      "theme": "yellow-theme",
+      "message of anime girl when hover": "Yay! Time to relax together! 🌸"
+    }
+  ],
+  "timeSlots": [
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00",
+    "18:00"
+  ],
+  "days": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ]
+}

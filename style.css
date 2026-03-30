@@ -57,6 +57,23 @@ header p {
     color: #896086;
 }
 
+.global-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+.bottom-controls {
+    margin-top: 4rem;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.bottom-controls:hover {
+    opacity: 1;
+}
+
 .timetable-container {
     background: var(--card-bg);
     backdrop-filter: blur(10px);
@@ -101,6 +118,26 @@ header p {
 .cute-btn.alt:hover {
     background: #bbb;
     box-shadow: 0 6px 20px rgba(204, 204, 204, 0.6);
+}
+
+.btn-save {
+    background: #aed9e0;
+    color: #5a4b56;
+    box-shadow: 0 4px 15px rgba(174, 217, 224, 0.4);
+}
+.btn-save:hover {
+    background: #9bc2c9;
+    box-shadow: 0 6px 20px rgba(174, 217, 224, 0.6);
+}
+
+.btn-load {
+    background: #b5ead7;
+    color: #5a4b56;
+    box-shadow: 0 4px 15px rgba(181, 234, 215, 0.4);
+}
+.btn-load:hover {
+    background: #a1d1bf;
+    box-shadow: 0 6px 20px rgba(181, 234, 215, 0.6);
 }
 
 .grid-wrapper {
@@ -187,7 +224,8 @@ td:hover {
     right: 20px;
     z-index: 10;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     pointer-events: none;
 }
 
@@ -208,18 +246,20 @@ td:hover {
     box-shadow: 0 5px 25px rgba(255, 142, 170, 0.3);
     border: 3px solid var(--primary);
     position: relative;
-    margin-right: -40px;
-    margin-bottom: 250px;
+    margin-right: 0px;
+    margin-bottom: 35px;
     max-width: 250px;
     pointer-events: auto;
     animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
 }
 
 .speech-bubble::after {
     content: '';
     position: absolute;
     bottom: -15px;
-    right: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     border-width: 15px 15px 0;
     border-style: solid;
     border-color: var(--primary) transparent transparent transparent;
@@ -229,7 +269,8 @@ td:hover {
     content: '';
     position: absolute;
     bottom: -10px;
-    right: 43px;
+    left: 50%;
+    transform: translateX(-50%);
     border-width: 12px 12px 0;
     border-style: solid;
     border-color: #ffffff transparent transparent transparent;

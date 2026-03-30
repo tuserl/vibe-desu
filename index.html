@@ -20,17 +20,8 @@
             </div>
             <div class="grid-wrapper">
                 <table id="timetable">
-                    <thead>
-                        <tr>
-                            <th>Time / Day</th>
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Friday</th>
-                            <th>Saturday</th>
-                            <th>Sunday</th>
-                        </tr>
+                    <thead id="timetable-head">
+                        <!-- Rendered by JS -->
                     </thead>
                     <tbody>
                         <!-- Rendered by JS -->
@@ -44,6 +35,12 @@
                 <p id="quote">Senpai, you're doing great! Keep it up! 💖</p>
             </div>
             <img src="assets/anime_girl.png" alt="Motivating Anime Girl" class="character-img" id="character">
+        </div>
+
+        <div class="global-controls bottom-controls">
+            <button id="save-btn" class="cute-btn btn-save">💾 Save JSON</button>
+            <button id="load-btn" class="cute-btn btn-load">📂 Load JSON</button>
+            <input type="file" id="file-input" accept=".json" style="display: none;">
         </div>
 
         <!-- Add Modal -->
@@ -67,6 +64,9 @@
                     
                     <label>Activity:</label>
                     <input type="text" id="activity-input" placeholder="Study Math..." required>
+                    
+                    <label>Anime Girl Message (Hover):</label>
+                    <input type="text" id="hover-message-input" placeholder="Great job!">
 
                     <label>Color:</label>
                     <select id="color-select">
